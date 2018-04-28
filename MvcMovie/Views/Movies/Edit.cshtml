@@ -9,6 +9,8 @@
 
 @using (Html.BeginForm())
 {
+    // The ValidateAntiForgeryToken attribute is used to prevent forgery of a request and is paired up with 
+    // @Html.AntiForgeryToken() in the edit view
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
