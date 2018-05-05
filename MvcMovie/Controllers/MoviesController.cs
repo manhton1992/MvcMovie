@@ -17,7 +17,6 @@ namespace MvcMovie.Controllers
         // GET: Movies
         public ActionResult Index( string movieGenre , string searchString)
         {
-
             var GenreLst = new List<String>();
             var GenreQry = from d in db.Movies
                            orderby d.Genre
@@ -100,7 +99,7 @@ namespace MvcMovie.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "ID,Title,ReleaseDate,Genre,Price,Rating")] Movie movie)
         {
             if (ModelState.IsValid)
@@ -114,7 +113,7 @@ namespace MvcMovie.Controllers
 
         // GET: Movies/Delete/5
         [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public ActionResult Delete(int? id)
         {
             if (id == null)
