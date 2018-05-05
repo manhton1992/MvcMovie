@@ -67,7 +67,8 @@ namespace MvcMovie.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        // khi khoi dong se tu dong chay den duong dan nay
+        //[ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ID,Title,ReleaseDate,Genre,Price,Rating")]Movie movie)
         {
             if (ModelState.IsValid)
@@ -112,6 +113,8 @@ namespace MvcMovie.Controllers
         }
 
         // GET: Movies/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
         public ActionResult Delete(int? id)
         {
             if (id == null)
