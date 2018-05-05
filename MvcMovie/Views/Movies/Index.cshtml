@@ -8,6 +8,17 @@
 
 <p>
     @Html.ActionLink("Create New", "Create")
+    
+    <!-- Modify URL for Search for a movie-->
+    @using (Html.BeginForm("Index","Movies", FormMethod.Get))
+    {    
+        <p> 
+             <!-- All tuc la Dua ra truoc cac the loai phim co trong Database  movies.Genre-->
+             Genre: @Html.DropDownList("movieGenre" , "All")
+             Title: @Html.TextBox("searchString") <br />
+             <input type="submit" value="Filter" /> 
+        </p>
+    }
 </p>
 <table class="table">
     <tr>
