@@ -198,6 +198,19 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805051922371_Initial.cs" />
+    <Compile Include="Migrations\201805051922371_Initial.Designer.cs">
+      <DependentUpon>201805051922371_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805051958383_Rating.cs" />
+    <Compile Include="Migrations\201805051958383_Rating.Designer.cs">
+      <DependentUpon>201805051958383_Rating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805052045202_DataAnnotations.cs" />
+    <Compile Include="Migrations\201805052045202_DataAnnotations.Designer.cs">
+      <DependentUpon>201805052045202_DataAnnotations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplyFormatInEditModeAttribute.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -291,6 +304,17 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201805051922371_Initial.resx">
+      <DependentUpon>201805051922371_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805051958383_Rating.resx">
+      <DependentUpon>201805051958383_Rating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805052045202_DataAnnotations.resx">
+      <DependentUpon>201805052045202_DataAnnotations.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
